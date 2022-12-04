@@ -16,3 +16,10 @@ high scores should have a purple background */
     margin: -200px 0 0 -250px;
 
 }
+
+button {
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+    background-color: blueviolet;
+}

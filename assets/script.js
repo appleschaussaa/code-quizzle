@@ -4,3 +4,7 @@
 // create button function for Submit, go back and highscore
 // have correct or wrong show up depending on answer
 
+var answersA = document.querySelector("#buttonA");
+var answersB = document.querySelector("#buttonB");
+var answersC = document.querySelector("#buttonC");
+var answersD = document.querySelector("#buttonD");
