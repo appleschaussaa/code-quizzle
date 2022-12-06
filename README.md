@@ -30,8 +30,8 @@ Users should be able to:
 ​
 ### Screenshot
 
-​![Screenshot code-quizzle](https://user-images.githubusercontent.com/116765038/205838946-457a6502-31ab-4868-83bb-3b7bf85a11c3.png)
-​
+​![Screenshot code-quizzle](https://user-images.githubusercontent.com/116765038/205839394-3a2e2e5b-0ced-4ea1-b814-fae22f1bb463.png)
+
 ### Links
 ​
 - Solution URL: [GitHub link](https://github.com/appleschaussaa/code-quizzle)
