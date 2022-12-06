@@ -1,7 +1,3 @@
-/* create main text for question as larger than answers
-have 4 answers in a collumn
-view scores should show in top left and be purple
-high scores should have a purple background */
 *{
     margin: 0;
     padding: 0;
@@ -16,9 +12,9 @@ left: 50%;
 margin: -200px 0 0 -250px;
 }
 
-.start-screen {
-    display: ;
-}
+/* .start-screen {
+   position: none;
+} */
 
 
 .highscore-screen {
@@ -44,6 +40,6 @@ button {
 }
 
 .round-timer {
-    align-content: flex-end;
-    flex-direction: right;
+    text-align: right;
+    /* display: none; */
 }
