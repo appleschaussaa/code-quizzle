@@ -15,23 +15,43 @@
 
 <body>
     <h4>View Highscore</h4>
+    <h4 class="round-timer">Time: </h4>
     <br>
-    <div >
+    <div class="quiz">
+        <div class="start-screen">
+            <h1>Coding Quiz Challenge</h1>
+            <br>
+            <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your scoretimeby 10 seconds!</p>
+            <br>
+            <button class="start-button">Start Quiz</button>
+        </div>
+        <br>
         <div class= "quiz-section">
-            <h3>Question</h3>
+            <h3 class="questions">questions</h3>
             <br>
                 <div class="answers">
-                    <button id="buttonA">1</button>
-                    <button id="buttonB">2</button>
-                    <button id="buttonC">3</button>
-                    <button id="buttonD">4</button>
+                    <button class="buttonA"></button>
+                    <button class="buttonB"></button>
+                    <button class="buttonC"></button>
+                    <button class="buttonD"></button>
                 </div>
         </div>
         <div class="highscore-input">
             <h4>All Done!</h4>
-            <p Your final score is "aria-placeholder=""></p>
+                <p> Your final score is "" </p>
             <label for="hs-initials">Enter Initials</label>
             <input type="text" name="initials" id="initials" placeholder="" />
+            
+        </div>
+        <br>
+        <div class="highscore-screen">
+            <h3>Highscores</h3>
+            <div class="highscore-list>"
+                <ul>
+                </ul>
+            </div>
+                <button class="go-back">Go Back</button>
+                <button class="Clear Highscores">Clear Highscores</button>
         </div>
     </div>
     <script src="./assets/script.js"></script>
