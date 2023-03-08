@@ -10,46 +10,61 @@
 </head>
 
 <body>
+    <header>
     <h4>View Highscore</h4>
     <h4 class="round-timer">Time: </h4>
-    <br>
-    <div class="quiz">
-        <div class="start-screen">
-            <h1>Coding Quiz Challenge</h1>
-            <br>
-            <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your scoretimeby 10 seconds!</p>
-            <br>
-            <button class="start-button">Start Quiz</button>
-        </div>
-        <br>
-        <div class= "quiz-section">
-            <h3 class="questions">questions</h3>
-            <br>
-                <div class="answers">
-                    <button class="buttonA"></button>
-                    <button class="buttonB"></button>
-                    <button class="buttonC"></button>
-                    <button class="buttonD"></button>
+    </header>
+
+    <main>
+        <section>
+            <div class="homepageQuiz" id="home-quiz">
+                <div id="startScreen" class="start-screen">
+                    <h1>Coding Quiz Challenge</h1>
+                    <br>
+                    <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your scoretimeby 10 seconds!</p>
+                    <br>
+                    <button class="start-button">Start Quiz</button>
                 </div>
-        </div>
-        <div class="highscore-input">
-            <h4>All Done!</h4>
-                <p> Your final score is "" </p>
-            <label for="hs-initials">Enter Initials</label>
-            <input type="text" name="initials" id="initials" placeholder="" />
-            
-        </div>
-        <br>
-        <div class="highscore-screen">
-            <h3>Highscores</h3>
-            <div class="highscore-list>"
-                <ul>
-                </ul>
             </div>
+        </section>
+
+        <section>
+            <div id="quizSection" class= "quiz-section hide">
+                <div class="questionArea" id="currentQuestions">
+                    <p></p>
+                </div>
+                <br>
+                <div class="answers">
+                    <button class="buttonAnswers" id="buttonA"></button>
+                    <button class="buttonAnswers" id="buttonB"></button>
+                    <button class="buttonAnswers" id="buttonC"></button>
+                    <button class="buttonAnswers" id="buttonD"></button>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div id="highscoreInput" class="highscore-input hide">
+                <h4>All Done!</h4>
+                    <p> Your final score is "" </p>
+                    <label for="hs-initials">Enter Initials</label>
+                    <input type="text" name="initials" id="initials" placeholder="" />
+            </div>
+        </section>
+
+        <section>
+            <div id="'highscoreScreen" class="highscore-screen hide">
+                <h3>Highscores</h3>
+                <div class="highscore-list>"
+                    <ul>
+                    </ul>
+                </div>
                 <button class="go-back">Go Back</button>
                 <button class="Clear Highscores">Clear Highscores</button>
-        </div>
-    </div>
+            </div>
+        </section>
+    </main>
+
     <script src="./assets/script.js"></script>
 </body>
 

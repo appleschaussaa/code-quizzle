@@ -1,59 +1,143 @@
 //button variables
-var answersA = document.getElementsByClassName("buttonA");
-var answersB = document.getElementsByClassName("buttonB");
-var answersC = document.getElementsByClassName("buttonC");
-var answersD = document.getElementsByClassName("buttonD");
-var mainStart = document.getElementsByClassName("start-button");
+var answersA = document.getElementById("#buttonA");
+var answersB = document.getElementById("#buttonB");
+var answersC = document.getElementById("#buttonC");
+var answersD = document.getElementById("#buttonD");
+// var mainStart = document.getElementsByClassName("start-button");
+var mainStart = document.querySelector(".start-button");
 var highscoreInitials = document.getElementsByClassName("initials");
 
 //other variables
 var quizOver;
 var countdownTimer;
-var currentQuestion = document.querySelector(".questions");
-var mainScreen = document.getElementsByClassName("start-screen");
+var currentQuestion = document.querySelector(".questionArea");
+// var currentQuestion = document.querySelector("#currentQuestions");
+var mainScreen = document.querySelector(".homepageQuiz");
+var quizSection = document.querySelector(".quiz-section");
 
 //adding click event
-answersA.addEventListener("click");
-answersB.addEventListener("click");
-answersC.addEventListener("click");
-answersD.addEventListener("click");
-highscoreInitials.addEventListener("click");
-mainStart.addEventListener("click", startQuiz);
+// answersA.addEventListener("click");
+// answersB.addEventListener("click");
+// answersC.addEventListener("click");
+// answersD.addEventListener("click");
+// highscoreInitials.addEventListener("click");
+// mainStart.addEventListener("click", startQuiz);
 
 // begin by trying to give a click event to the start button
-document.querySelector(".start-button").addEventListener("click", changePage);
+// document.getElementsById(".start-button").addEventListener("click", startQuiz);
 
 // when the start button is pressed the start screen was supposed to be hidden
-function changePage() {
-    document.querySelector(".start-screen").style.display = "none";
+// function changePage() {
+//     document.querySelector(".start-screen").style.display = "none";
+// };
+
+// mainStart.addEventListener("click", startQuiz);
+
+// function startQuiz() {
+//     mainScreen.classList.add("hide");
+//     quizSection.classList.remove("hide");
+//     displayQuiz;
+// };
+
+// console.log(startQuiz);
+
+// function currentQuestion() {
+var questionInsert = [
+        // question1 = 
+        "Commonly used data types DO NOT include: ",
+        "The condition in an if/else statement is enclosed within ___. ",
+
+        // { question: "The condition in an if/else statement is enclosed within ___. "},
+
+        // { question: "Arrays in JavaScript can be used to store ___. "},
+
+        // { question: "String values must be enclosed within ___ when being assigned to variables. "},
+        // { question: "A very useful tool used during development and debugging for printing content to the debugger is: "}
+];
+
+// function startQuiz() {
+//     mainScreen.classList.add('hide');
+//     quizSection.classList.remove('hide');
+//     displayQuiz;
+// };
+
+// function displayQuiz() {
+//     currentQuestion.innerHTML = questionInsert.question[0];
+
+// };
+
+    var answerOne = [{ text: "strings"}, { text: "booleans"}, { text: "alerts"}, { text: "numbers"}];
+    var answerTwo = [{ text: "quotes"}, { text: "curly brckets"}, { text: "parenthesis"}, { text: "square brackets"}];
+    var answerThree = [{ text: "numbers and strings"}, { text: "other arrays"}, { text: "booleans"}, { text: "all of the above"}];
+    var answerFour = [{ text: "commas"}, { text: "curly brackets"}, { text: "quotes"}, { text: "parenthesis"}];
+    var answerFive = [{ text: "Javascript"}, { text: "terminal/bash"}, { text: "for loops"}, { text: "console.log"}]
+    var correctAnswer1 = answerOne[3];
+    var correctAnswer2 = answerTwo[1];
+    var correctAnswer3 = answerThree[3];
+    var correctAnswer4 = answerFour[2];
+    var correctAnswer5 = answerFive[3]
+// };
+
+function correctAnswer () {
+    if (questionInsert[0].clickevent = correctAnswer1) {
+        console.log("correct")
+    } else {
+        console.log("incorrect")
+    };
+    if (questionInsert[1].clickevent = correctAnswer2) {
+        console.log("correct")
+    } else {
+        console.log("incorrect")
+    };
+    if (questionInsert[2].clickevent = correctAnswer3) {
+        console.log("correct")
+    } else {
+        console.log("incorrect")
+    };
+    if (questionInsert[3].clickevent = correctAnswer4) {
+        console.log("correct")
+    } else {
+        console.log("incorrect")
+    };
+    if (questionInsert[4].clickevent = correctAnswer5) {
+        console.log("correct")
+    } else {
+        console.log("incorrect")
+    };
 };
+
+function nextQuestion() {
+
+};
+
+mainStart.addEventListener("click", startQuiz);
 
 function startQuiz() {
-    mainScreen.classList.add('hide');
-
+    mainScreen.classList.add("hide");
+    quizSection.classList.remove("hide");
+    displayQuiz;
 };
 
-// create function to display new question and answers on each press until it cycles through or time runs out
-// .sort(() => Math.random() is used somewhere in here from previous examples
+function displayQuiz() {
+        currentQuestion.innerHTML = questionInsert[0];
+    
+    };
 
-// create function that randomly chooses questions and the answers that go with them
+    console.log(displayQuiz());
+// function displayQuiz() {
+//     currentQuestion.innerHTML += questionInsert[0];
+// };
 
-//create function that answers with correct or incorrect, if incorrect time will be subtracted
+// function startQuiz() {
+//     mainScreen.classList.add('hide');
+//     quizSection.classList.remove('hide');
+//     displayQuiz;
+// };
 
-// create function that keeps track of corrct and incorrect and adds it to the highscore-input and makes the display for that visible
+// mainStart.addEventListener("click", startQuiz);
 
-//create a function to clear all scores and a back button that goes back to the start screen, making it visible again while hiding the highscore screen
+// init();
 
-// will use to change question within class="questions"
-function currentQuestion() {
-    var questionInsert = ("Commonly used data types DO NOT include: " , "The condition in an if/else statement is enclosed within ___. ", "Arrays in JavaScript can be used to store ___. ", "String values must be enclosed within ___ when being assigned to variables. ", "A very useful tool used during development and debugging for printing content to the debugger is: ");
-}
-// will use to insert into each of the answer buttons
-function allAnswers () {
-    var answerOne = ("strings", "quotes", "numbers and strings", "commas", "JavaScript");
-    var answerTwo = ("booleans", "curly brackets", "other arrays", "curly brackets", "terminal/bash");
-    var answerThree = ("alerts", "parentheses", "booleans", "quotes", "for loops");
-    var answerFour = ("numbers", "square brackets", "all of the above", "parentheses", "consol.log");
-};
+// function quizOver() {
 
-//
+// };

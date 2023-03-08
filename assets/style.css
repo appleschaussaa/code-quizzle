@@ -16,8 +16,11 @@ margin: -200px 0 0 -250px;
    position: none;
 } */
 
+.hide {
+    display: none;
+}
 
-.highscore-screen {
+/* .highscore-screen {
     display: none;
 
 }
@@ -30,7 +33,7 @@ margin: -200px 0 0 -250px;
 .quiz-section {
     display: none;
 
-}
+} */
 
 button {
     display: flex;
