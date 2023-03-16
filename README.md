@@ -66,8 +66,8 @@ Between this challenge and the previous one I have enough examples to hopefully 
 ### Useful resources
 
 - [resource](https://www.w3schools.com/jsref/event_onclick.asp) -
-- [resource](resourcelink) - 
-- [resource](resourcelink) - 
+- [resource](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll) - 
+- [resource](https://www.w3schools.com/jsref/met_loc_reload.asp) - 
 - [resource](resourcelink) - 
 - [resource](resourcelink) - 
 - [resource](resourcelink) - 

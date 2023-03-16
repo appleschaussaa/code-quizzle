@@ -5,56 +5,71 @@ var answersC = document.getElementById("buttonC");
 var answersD = document.getElementById("buttonD");
 var mainStart = document.querySelector(".start-button");
 var buttonAnswers = document.querySelectorAll(".buttonAnswers");
-var highscoreInitials = document.getElementsByClassName("initials");
+// var highscoreInitials = document.getElementsByClassName("initials");
+var submitInitials = document.querySelector(".button-initials");
+var quizRestart = document.querySelector(".restart-quiz");
+var clearHighscores = document.querySelector(".clear-highscores");
+
 
 //other variables
 var quizOver;
-var countdownTimer;
+var timer;
+var timeLeft;
 var startQuestion = 0;
-var finalQuestion = 6;
 // var currentQuestion = document.querySelector(".questionArea");
+var countdownInsert = document.querySelector(".countdown-timer");
 var currentQuestion = document.getElementById("currentQuestions");
 var mainScreen = document.querySelector(".homepageQuiz");
 var quizSection = document.querySelector(".quiz-section");
+var highscoreInitials = document.querySelector(".highscore-input");
+var highscoreScreen = document.querySelector(".highscore-screen");
+var header = document.querySelector(".header");
 
 // function currentQuestion() {
 var questions = [
     { 
         question: "Commonly used data types DO NOT include: ",
-        answerOne: "1. strings",
-        answerTwo: "2. booleans",
-        answerThree: "3. alerts",
-        answerFour: "4. numbers",
+        answerOne: "strings",
+        answerTwo: "booleans",
+        answerThree: "alerts",
+        answerFour: "numbers",
+        // correct: questions.answerThree
     },
     { 
         question: "The condition in an if/else statement is enclosed within ___. ",
-        answerOne: "1. quotes",
-        answerTwo: "2. curly brckets",
-        answerThree: "3. parenthesis",
-        answerFour: "4. square brackets",
+        answerOne: "quotes",
+        answerTwo: "curly brackets",
+        answerThree: "parenthesis",
+        answerFour: "square brackets",
+        // correct: answerTwo
     },
     { 
         question: "Arrays in JavaScript can be used to store ___. ",
-        answerOne: "1. numbers and strings",
-        answerTwo: "2. other arrays",
-        answerThree: "3. booleans",
-        answerFour: "4. all of the above",
+        answerOne: "numbers and strings",
+        answerTwo: "other arrays",
+        answerThree: "booleans",
+        answerFour: "all of the above",
+        // correct: answerFour
     },
     { 
         question: "String values must be enclosed within ___ when being assigned to variables. ",
-        answerOne: "1. commas",
-        answerTwo: "2. curly brackets",
-        answerThree: "3. quotes",
-        answerFour: "4. parenthesis",
+        answerOne: "commas",
+        answerTwo: "curly brackets",
+        answerThree: "quotes",
+        answerFour: "parenthesis",
+        // correct: answerThree
     },
     { 
         question: "A very useful tool used during development and debugging for printing content to the debugger is: ",
-        answerOne: "1. Javascript",
-        answerTwo: "2. terminal/bash",
-        answerThree: "3. for loops",
-        answerFour: "4. console.log",
+        answerOne: "Javascript",
+        answerTwo: "terminal/bash",
+        answerThree: "for loops",
+        answerFour: "console.log",
+        // correct: answerFour
     }
 ];
+
+var finalQuestion = questions.length -1;
 
 //     var correctAnswer1 = answerOne[3];
 //     var correctAnswer2 = answerTwo[1];
@@ -91,41 +106,80 @@ var questions = [
 //     };
 // };
 
-// function nextQuestion() {
-
-// };
-
 mainStart.addEventListener("click", startQuiz);
-// buttonAnswers.addEventListener("click", nextQuestion);
 
 function startQuiz() {
+    timeLeft = 75
     mainScreen.classList.add("hide");
     quizSection.classList.remove("hide");
     displayQuiz();
+    countdownTimer();
+};
+
+function countdownTimer() {
+    timer = setInterval(function() {
+        timeLeft--;
+        countdownInsert.textContent = "Time:" + timeLeft;
+        if (timeLeft === 0) {
+            displayHighscore()
+        }
+    }, 1000)
+    return
 };
 
 function displayQuiz() {
-    var questionDisplay = questions[startQuestion]
-    currentQuestion.innerHTML = "<h3>" + questionDisplay.question + "<h3>";
-    answersA.innerHTML =  questionDisplay.answerOne;
-    answersB.innerHTML = questionDisplay.answerTwo;
-    answersC.innerHTML = questionDisplay.answerThree;
-    answersD.innerHTML = questionDisplay.answerFour;
-    // buttonAnswers.addEventListener("click", nextQuestion());
+    var questionDisplay = questions[startQuestion];
+    currentQuestion.innerHTML = "<h1>" + questionDisplay.question + "<h1>";
+    answersA.innerHTML = "1. " + questionDisplay.answerOne;
+    answersB.innerHTML = "2. " +questionDisplay.answerTwo;
+    answersC.innerHTML = "3. " +questionDisplay.answerThree;
+    answersD.innerHTML = "4. " +questionDisplay.answerFour;
+    buttonAnswers.forEach((btn) => {
+        btn.addEventListener("click", nextQuestion);
+    });
 };
 
-buttonAnswers.forEach((btn) => {
-    btn.addEventListener("click", nextQuestion);
-});
+// buttonAnswers.forEach((btn) => {
+//     btn.addEventListener("click", nextQuestion);
+// });
 
 function nextQuestion() {
     if (startQuestion < finalQuestion) {
         startQuestion++;
-        // displayQuiz();
+        return displayQuiz(startQuestion);
+    } else {
+        quizSection.classList.add("hide");
+        // highscoreInitials.classList.remove("hide");
+        return highScoreInput()
     }
-    return displayQuiz(startQuestion);
+    // return displayQuiz(startQuestion);
 }
 
-// function highScore() {
+function highScoreInput() {
+    timer = clearInterval(timeLeft = 0)
+    header.classList.add("hide");
+    highscoreInitials.classList.remove("hide");
+    submitInitials.addEventListener("click", displayHighscore);
+};
 
-// };
+// submitInitials.addEventListener("click", displayHighscore);
+
+function displayHighscore() {
+    highscoreInitials.classList.add("hide");
+    highscoreScreen.classList.remove("hide");
+    clearHighscores.addEventListener("click", eraseHighscore);
+    quizRestart.addEventListener("click", restartQuiz);
+};
+
+function eraseHighscore() {
+
+};
+
+function restartQuiz() {
+    // highscoreScreen.classList.add("hide");
+    // mainScreen.classList.remove("hide");
+    // header.classList.remove("hide");
+    // startQuestion = 0;
+    // timer = 0;
+    location.reload();
+}

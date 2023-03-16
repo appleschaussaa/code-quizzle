@@ -11,8 +11,10 @@
 
 <body>
     <header>
-    <h4>View Highscore</h4>
-    <h4 class="round-timer">Time: </h4>
+        <div class="header">
+            <h4>View Highscore</h4>
+            <h4 class="countdown-timer">Time: 0 </h4>
+        </div>
     </header>
 
     <main>
@@ -31,7 +33,7 @@
         <section>
             <div id="quizSection" class= "quiz-section hide">
                 <div class="questionArea" id="currentQuestions">
-                    <h3></h3>
+                    
                 </div>
                 <br>
                 <div class="answers">
@@ -45,22 +47,27 @@
 
         <section>
             <div id="highscoreInput" class="highscore-input hide">
-                <h4>All Done!</h4>
+                <div>
+                    <h2>All Done!</h2>
+                    <br>
                     <p> Your final score is "" </p>
                     <label for="hs-initials">Enter Initials</label>
                     <input type="text" name="initials" id="initials" placeholder="" />
+                </div>
+                <div>
+                    <button class="button-initials" id="buttonInitials">Submit</button>
+                </div>
             </div>
         </section>
 
         <section>
             <div id="'highscoreScreen" class="highscore-screen hide">
-                <h3>Highscores</h3>
+                <h2>Highscores</h2>
                 <div class="highscore-list>"
-                    <ul>
-                    </ul>
+
                 </div>
-                <button class="go-back">Go Back</button>
-                <button class="Clear Highscores">Clear Highscores</button>
+                <button class="restart-quiz">Go Back</button>
+                <button class="clear-highscores">Clear Highscores</button>
             </div>
         </section>
     </main>

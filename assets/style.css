@@ -38,9 +38,15 @@ margin: -200px 0 0 -250px;
 button {
     display: flex;
     flex-direction: column;
+    margin: 5px 0px;
+    padding: 5px 3px;
     color: aliceblue;
     background-color: blueviolet;
 }
+
+/* .button-initials {
+    display: block;
+} */
 
 .round-timer {
     text-align: right;
