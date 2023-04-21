@@ -50,10 +50,16 @@
                 <div>
                     <h2>All Done!</h2>
                     <br>
-                    <p> Your final score is "" </p>
+                    <p id="displayScore" class="display-score">  </p>
                     <label for="hs-initials">Enter Initials</label>
-                    <input type="text" name="initials" id="initials" placeholder="" />
                 </div>
+                <form>
+                    <input type="text" name="initials-box" id="initials" placeholder="Enter Initials Here" />
+                <!-- </div> -->
+                    <!-- <div>
+                        <button class="button-initials" id="buttonInitials">Submit</button>
+                    </div> -->
+                </form>
                 <div>
                     <button class="button-initials" id="buttonInitials">Submit</button>
                 </div>
@@ -63,8 +69,8 @@
         <section>
             <div id="'highscoreScreen" class="highscore-screen hide">
                 <h2>Highscores</h2>
-                <div class="highscore-list>"
-
+                <div id="highscore-list">
+                    
                 </div>
                 <button class="restart-quiz">Go Back</button>
                 <button class="clear-highscores">Clear Highscores</button>

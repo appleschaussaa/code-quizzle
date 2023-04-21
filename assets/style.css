@@ -42,7 +42,13 @@ button {
     padding: 5px 3px;
     color: aliceblue;
     background-color: blueviolet;
+    /* transition-duration: 0.4s; */
 }
+
+/* button:hover {
+    background-color: blueviolet; /* Green */
+    /* color: blueviolet;
+  } */
 
 /* .button-initials {
     display: block;
