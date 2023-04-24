@@ -12,28 +12,9 @@ left: 50%;
 margin: -200px 0 0 -250px;
 }
 
-/* .start-screen {
-   position: none;
-} */
-
 .hide {
     display: none;
 }
-
-/* .highscore-screen {
-    display: none;
-
-}
-
-.highscore-input {
-    display: none;
-
-}
-
-.quiz-section {
-    display: none;
-
-} */
 
 button {
     display: flex;
@@ -42,19 +23,8 @@ button {
     padding: 5px 3px;
     color: aliceblue;
     background-color: blueviolet;
-    /* transition-duration: 0.4s; */
 }
-
-/* button:hover {
-    background-color: blueviolet; /* Green */
-    /* color: blueviolet;
-  } */
-
-/* .button-initials {
-    display: block;
-} */
 
 .round-timer {
     text-align: right;
-    /* display: none; */
 }

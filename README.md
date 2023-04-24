@@ -20,30 +20,22 @@
 ​
 Users should be able to:
 ​
-- create a times quiz that :
-    - starts with a main screen briefly explaining the quiz and a start button
-    - once pressing the start button go through each question and try to guess the right question until finished or time runs out
-    - have it take you to a finshed page that collects initials and adds to the highscore screen
-    - from the highscore screen make the ability to clear highscore and go back to the main screen again
-- basic CSS to alter the display of each part of the quiz
-- HTML skills to set up each segment along with classes to call upon and buttons to navigate
-- Javascript to get the quiz to function properly
+- create a timed quiz that used javascript in a script.js file, HTML in an index.js file and CSS in a style.js file
+- introduce the script and style file to the index file at the correct spots to use them
+- Use event listeners and document methods to interact with the HTML through the javascript
 ​
 ### Screenshot
 ​
-![](./screenshot.jpg)
-​
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-​
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
-​
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
+![Alt text](assets/screenshots/code-quiz-homescreen.png)
+
+![Alt text](assets/screenshots/code-quiz-example1.png)
+
+![Alt text](assets/screenshots/code-quiz-example2.png)
 ​
 ​
 ### Links
 ​
-- Solution URL: [GitHub link](https://github.com/appleschaussaa/code-quizzle)
-- Live Site URL: [Deployed site](https://your-live-site-url.com)
+- GitHub files: [Repo link](https://github.com/appleschaussaa/code-quizzle)
 ​
 ## My process
 ​
@@ -56,21 +48,18 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 ​
 ### What I learned
 ​
-Once again I feel fairly comfortable with HTML and CSS and in theory what to do with Javascript but despite trying to add a click function to the start button (or really any of the buttons) it proved to be challenging to the point of restarting few times and looking for solutions that I could never get to pay off.
+I learned to appreciate some of the techniques we have learned since working with javascript in this way. Things have to be written out a lot more and hardly and shortcuts. I also realized that starting over from scratch would have been easier rather than adapting the code I had already used. I wanted to show that I was on the right path with what I had been working on when turned in and make that work.
 ​
 ### Continued development
 ​
-Between this challenge and the previous one I have enough examples to hopefully show a tutor so they might help guide me to see what I am getting caught up on and might clear things up so I can retain the information a little better. I spent hours looking over code and Q and As and videos but nothing seemed to fit right.
-​
+Honestly I believe I have the correct code for determining the answer selected to determine where it is correct or incorrect but could not get it fully implimented. Also entering in initials and the score to the highscore page would be the next thing to fully work on. Finally some more CSS to make it a little cleaner would be nice
 
 ### Useful resources
 
-- [resource](https://www.w3schools.com/jsref/event_onclick.asp) -
-- [resource](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll) - 
-- [resource](https://www.w3schools.com/jsref/met_loc_reload.asp) - 
-- [resource](resourcelink) - 
-- [resource](resourcelink) - 
-- [resource](resourcelink) - 
+- [onclick event resource](https://www.w3schools.com/jsref/event_onclick.asp) - Helped explain the click event and onClick usability
+- [querySelector resource](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll) - Helped with using the querySelectors and distinguish the difference for the getElementById method.
+- [reload() method resource](https://www.w3schools.com/jsref/met_loc_reload.asp) - This helped find a efficient way to restart the quiz without losing any information... theoretically
+
 
 ## Author
 
@@ -79,4 +68,4 @@ Robert Schauss
 ​
 ## Acknowledgments
 ​
-I would like to always thank our instructor and the TA's for helping out in our group activity breakout rooms and before and after class during office hours. Also having all the links in the bootcamp roadmap, which can be intimidating but usually helps out quite a bit.
+I would like to always thank our instructor and the TA's for helping out in our group activity breakout rooms and before and after class during office hours. Also having all the links in the bootcamp roadmap, which can be intimidating but usually helps out quite a bit. further help got me past some early on issues but still had a few stopping me from getting it to work 100%
